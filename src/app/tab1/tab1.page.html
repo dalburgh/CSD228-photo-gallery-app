@@ -1,17 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Log in </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Log in</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="ion-margin">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input placeholder="example@email.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    <ion-row  class="ion-justify-content-evenly ion-margin-top">
+        <ion-button shape="round" size="large">
+          LOG IN
+          <ion-icon name="log-in-outline"></ion-icon>
+        </ion-button>
+        <ion-button shape="round" size="large" routerLink="/sign-up" routerDirection="forward">
+          Sign Up
+          <ion-icon name="person-add-outline"></ion-icon>
+        </ion-button>
+    </ion-row>
+  </div>
 </ion-content>

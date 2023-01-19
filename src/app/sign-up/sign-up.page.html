@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-margin">
+    <ion-item class="ion-margin">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input placeholder="example@email.com" type="email"></ion-input>
+      <ion-note slot="error">Invalid email</ion-note>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input placeholder="John"></ion-input>
+      <ion-note slot="error">Please complete this field</ion-note>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input placeholder="Smith"></ion-input>
+      <ion-note slot="error">Please complete this field</ion-note>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input type="tel" placeholder="888-888-8888" maxlength="10"></ion-input>
+      <ion-note slot="error">Please complete this field</ion-note>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" placeholder=""></ion-input>
+      <ion-note slot="helper">Ensure your password is at least 8 characters and include one uppercase letter, one lowercase letter, a number, and a special character</ion-note>
+      <ion-note slot="error">Ensure your password meets the specifications</ion-note>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input type="password" placeholder=""></ion-input>
+      <ion-note slot="error">Ensure your password matches the previous field</ion-note>
+    </ion-item>
+
+    <ion-row class="ion-margin ion-justify-content-evenly">
+      <ion-button shape="round" size="large">
+        Sign Up
+        <ion-icon name="person-add-outline"></ion-icon>
+      </ion-button>
+      <ion-button shape="round" size="large">
+        Cancel
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-row>
+  </div>
+</ion-content>
