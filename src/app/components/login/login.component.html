@@ -14,11 +14,11 @@
   <div class="ion-margin">
     <ion-item>
       <ion-label position="floating">Email</ion-label>
-      <ion-input placeholder="example@email.com"></ion-input>
+      <ion-input [(ngModel)]="email" placeholder="example@email.com"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" placeholder="Password"></ion-input>
+      <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
     </ion-item>
 
     <ion-row  class="ion-justify-content-evenly ion-margin-top">
