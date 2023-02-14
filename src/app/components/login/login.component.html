@@ -21,17 +21,23 @@
       <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
     </ion-item>
 
-    <ion-row  class="ion-justify-content-evenly ion-margin-top">
-        <ion-button shape="round" size="large" (click)="signIn()">
-          Sign In
-          <ion-icon name="log-in-outline" slot="end"></ion-icon>
+      <ion-row  class="ion-justify-content-center ion-margin-top">
+          <ion-button (click)="signIn()">
+            Sign In
+            <ion-icon name="log-in-outline" slot="end"></ion-icon>
+          </ion-button>
+          <h1 *ngIf="auth.isLoggedIn()"> Welcome {{auth.getUserData().email}}! </h1>
+          <ion-button routerLink="/sign-up" routerDirection="forward">
+            Sign Up
+            <ion-icon name="person-add-outline" slot="end"></ion-icon>
+          </ion-button>
+      </ion-row>
+      <ion-row class="ion-text-center ion-margin-top ion-justify-content-center">
+        <ion-button (click)="auth.signinWithGooglePopUp()">
+          Sign in with Google
+          <ion-icon name="logo-google" slot="end"></ion-icon>
         </ion-button>
-        <h1 *ngIf="auth.isLoggedIn()"> Welcome! </h1>
-        <ion-button shape="round" size="large" routerLink="/sign-up" routerDirection="forward">
-          Sign Up
-          <ion-icon name="person-add-outline" slot="end"></ion-icon>
-        </ion-button>
-    </ion-row>
+      </ion-row>
   </div>
 </ion-content>
 
