@@ -5,22 +5,23 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateAgoPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
+  transform(value: any, ...args: unknown[]): unknown {
     if (value) {
-      const seconds = Math.floor((+new Date() - +new Date(value.toString())) / 1000);
+
+      const seconds = Math.floor((+new Date() - +new Date(value)) / 1000);
 
       if (seconds < 29) // less than 30 seconds ago will show as 'Just now'
         return 'Just now';
 
       const intervals = [
-        { title: 'year', seconds: 31536000},
-        { title: 'month', seconds: 2592000},
-        { title: 'week', seconds: 604800},
-        { title: 'day', seconds: 86400},
-        { title: 'hour', seconds: 3600},
-        { title: 'minute', seconds: 60},
-        { title: 'second', seconds: 1},
-        ];
+        { title: 'year', seconds: 31536000 },
+        { title: 'month', seconds: 2592000 },
+        { title: 'week', seconds: 604800 },
+        { title: 'day', seconds: 86400 },
+        { title: 'hour', seconds: 3600 },
+        { title: 'minute', seconds: 60 },
+        { title: 'second', seconds: 1 },
+      ];
 
       let counter;
 
@@ -32,9 +33,9 @@ export class DateAgoPipe implements PipeTransform {
           } else {
             return counter + ' ' + intervals[i].title + 's ago'; // plural (2 days ago)
           }
-        }
       }
-      return value;
+    }
+    return value;
   }
 
 }

@@ -11,9 +11,8 @@
   <ion-card *ngFor="let login of database.logins">
     <img alt="fire-ranger tower in a forest" src="https://wallpapers.com/images/featured-full/minimalist-7xpryajznty61ra3.jpg" />
     <ion-card-header>
-      <ion-card-title>John Smith</ion-card-title>
       <ion-card-title>{{login.email}}</ion-card-title>
-      <ion-card-subtitle>example@email.com</ion-card-subtitle>
+      <ion-card-subtitle>{{login.email}}</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
